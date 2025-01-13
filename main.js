@@ -135,5 +135,52 @@
 // })
 // console.log(arrSort2);
 
+// const obj = {
+//     name:"Jasur",
+//     age:32,
+//     adress:{
+//         streeet:"pakhtakor",
+//         home:32,
+//     }
+// }
 
+// const obj2 =  JSON.parse(JSON.stringify(obj))
+ 
+// obj3.adress.home = 999
+// console.log(obj);
+// console.log(obj2);
+// console.log(obj3);
 
+// Elements
+
+const productType = document.getElementById("type-select");
+const productName = document.getElementById("product-name");
+const productCount = document.getElementById("product-count");
+const addProductBtn = document.querySelector(".add-product");
+const clearProductBtn = document.querySelector(".clear-list");
+const productList = [];
+// слушатель событий
+addProductBtn.addEventListener("click",addProduct);
+function addProduct() {
+const productTypeValue = productType.value.trim();
+const productNameValue = productName.value.trim();
+const productCountValue = productCount.value.trim();
+
+if(!productTypeValue || !productNameValue || !productCountValue) {
+    alert("Заполните поля");
+}
+
+const productCards = productList.some((elem) => elem.productType === productTypeValue);
+if(!productCards){
+
+const product = {
+    productType: productTypeValue,
+    productName: [productNameValue],
+    productCount: [productCountValue],
+    };
+    productList.push(obj);
+    console.log(productList);
+}
+}
+
+// console.log(!!" ");
