@@ -126,17 +126,42 @@ select:is(:hover, :focus) {
 }
 
 .products-wrapper {
+  display: grid;
+  color: purple;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  grid-template-areas: "овощи/фрукты полуфабрикаты Сыры/колбасы"
+                       "Полезное питание Напитки Уход за собой";
   margin-bottom: 50px;
+
 }
 
 .products-title {
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 24px;
   margin-bottom: 20px;
 }
 
 .products-list {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.products-list h3 {
+  margin-bottom: 10px;
+}
+.products-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.products-list ul li {
+margin-bottom: 2px;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .product {
